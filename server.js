@@ -1,7 +1,4 @@
-const express = require("express");
-const app = express();
-
-const io = require('socket.io')(process.env.PORT);
+const io = require('socket.io')();
 
 function makeid(length) {
     let result           = '';
