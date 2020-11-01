@@ -31,7 +31,7 @@ io.on('connection', client => {
       playerEndingGame[roomName]++;
 
       // io.in(roomName).emit('gameEnd', x);
-      if(playerEndingGame[roomName] == totalPlayerActive) //{console.log("XXXXXx");
+      if(playerEndingGame[roomName] == totalPlayerActive) { // console.log("XXXXXx");
           io.in(roomName).emit('lastJoined');
           playerEndingGame[roomName] = 0;
       }
